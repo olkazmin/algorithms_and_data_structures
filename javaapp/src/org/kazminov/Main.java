@@ -1,6 +1,7 @@
 package org.kazminov;
 
 import org.kazminov.algorithm.InsertionSort;
+import org.kazminov.algorithm.SelectionSort;
 import org.kazminov.algorithm.SimpleSearch;
 
 import java.util.Arrays;
@@ -10,6 +11,14 @@ public class Main {
     public static void main(String[] args) {
 //         insertionSort();
 //        simpleSearch();
+        selectionSort();
+    }
+
+    private static void selectionSort() {
+        final int[] a = {5, 4, 6, 1, 3, 2,5, 4, 6, 1, 3, 2,5, 4, 6, 1, 3, 2,5, 4, 6, 1, 3, 2,5, 4, 6, 1, 3, 2};
+        log("Initial array: %s", Arrays.toString(a));
+        SelectionSort.sort(a);
+        log("Result array: %s", Arrays.toString(a));
     }
 
     private static void simpleSearch() {
