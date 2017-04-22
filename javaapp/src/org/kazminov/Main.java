@@ -1,24 +1,21 @@
 package org.kazminov;
 
+import org.kazminov.algorithm.InsertionSort;
+
 import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
+         insertionSort();
+    }
+
+    private static void insertionSort() {
         final int[] a = {5, 4, 6, 1, 3, 2,5, 4, 6, 1, 3, 2,5, 4, 6, 1, 3, 2,5, 4, 6, 1, 3, 2, 5, 4, 6, 1, 3, 2, 5, 4,
                 6, 1, 3, 2,5, 4, 6, 1, 3, 2,5, 4, 6, 1, 3, 2,5, 4, 6, 1, 3, 2,5, 4, 6, 1, 3, 2,5, 4, 6, 1, 3, 2,5, 4,
                 6, 1, 3, 2,5, 4, 6, 1, 3, 2};
-        int key;
         log("Initial array: %s", Arrays.toString(a));
-        for (int j = 1; j < a.length;j++) {
-            key = a[j];
-            int i = j - 1;
-            while (i >= 0 && a[i] < key) {
-                a[i + 1] = a[i];
-                i = i - 1;
-            }
-            a[i + 1] = key;
-        }
+        InsertionSort.sort(a);
         log("Result array: %s", Arrays.toString(a));
     }
 
