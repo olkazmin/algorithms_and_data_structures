@@ -21,28 +21,25 @@ public class MergeSort {
     private static void merge(int[]a, int l, int q, int r) {
         final int n1 = q - l + 1;   // because q is calculated using Math.floor
         final int n2 = r - q;
-        final int[] left = new int[n1 + 1];
-        final int[] right = new int[n2 + 1];
+        final int[] left = new int[n1];
+        final int[] right = new int[n2];
 
         // copy values from a to left/right arrays
         int i = 0;
-        for (; i < left.length - 1; i++) {
+        for (; i < left.length; i++) {
             left[i] = a[l + i];
         }
 
         i = 0;
-        for (; i < right.length - 1; i++) {
+        for (; i < right.length; i++) {
             right[i] = a[q + i + 1];
         }
-
-        left[left.length - 1] = Integer.MAX_VALUE;
-        right[right.length - 1] = Integer.MAX_VALUE;
 
         int leftIndex = 0;
         int rightIndex = 0;
 
         for (int k = l; k <= r;k++) {
-            if (left[leftIndex] <= right[rightIndex]){
+            if (rightIndex == right.length || (leftIndex < left.length && left[leftIndex] <= right[rightIndex])){
                 a[k] = left[leftIndex];
                 leftIndex++;
             } else {
