@@ -11,9 +11,10 @@ public class Main {
 
     public static void main(String[] args) {
 //         insertionSort();
+        insertionSortWithRecursion();
 //        simpleSearch();
 //        selectionSort();
-        mergeSort();
+//        mergeSort();
     }
 
     private static void mergeSort() {
@@ -48,6 +49,14 @@ public class Main {
                 6, 1, 3, 2,5, 4, 6, 1, 3, 2};
         log("Initial array: %s", Arrays.toString(a));
         InsertionSort.sort(a);
+        log("Result array: %s", Arrays.toString(a));
+    }
+
+    private static void insertionSortWithRecursion() {
+//        final int[] a = {5, 4, 6, 1, 3, 2,5, 4, 6, 1, 3, 2,5, 4, 6, 1, 3, 2,5, 4, 6, 1, 3, 2, 5, 4, 6, 1};
+        final int[] a = {20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0};
+        log("Initial array: %s", Arrays.toString(a));
+        InsertionSort.sortWithRecursion(a);
         log("Result array: %s", Arrays.toString(a));
     }
 
