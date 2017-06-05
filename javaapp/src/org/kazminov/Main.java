@@ -1,9 +1,6 @@
 package org.kazminov;
 
-import org.kazminov.algorithm.InsertionSort;
-import org.kazminov.algorithm.MergeSort;
-import org.kazminov.algorithm.SelectionSort;
-import org.kazminov.algorithm.SimpleSearch;
+import org.kazminov.algorithm.*;
 
 import java.util.Arrays;
 
@@ -11,10 +8,18 @@ public class Main {
 
     public static void main(String[] args) {
 //         insertionSort();
-        insertionSortWithRecursion();
+//        insertionSortWithRecursion();
 //        simpleSearch();
 //        selectionSort();
 //        mergeSort();
+        binarySearch();
+    }
+
+    private static void binarySearch() {
+        final int[] a = {1, 2, 3, 4, 5};
+        final int v = 3;
+        final BinarySearch.BinarySearchResult result = BinarySearch.search(a, v);
+        log("array: %s, search for %d, position=%d, iterations=%d", Arrays.toString(a), v, result.position, result.iterations);
     }
 
     private static void mergeSort() {
