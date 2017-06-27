@@ -1,6 +1,7 @@
 package org.kazminov;
 
 import org.kazminov.algorithm.*;
+import org.kazminov.other.Excercises;
 
 import java.util.Arrays;
 
@@ -12,7 +13,16 @@ public class Main {
 //        simpleSearch();
 //        selectionSort();
 //        mergeSort();
-        binarySearch();
+        // binarySearch();
+        findSumm();
+
+    }
+
+    private static void findSumm() {
+        final int[] a = {0, 1, 2, 3};
+        final int x = 5;    // needed summ
+        Object[] result = Excercises.findSum(a, x);
+        log("array: %s, sum=%d, found=%b, items=[%d, %d]", Arrays.toString(a), x, result[0], result[1], result[2]);
     }
 
     private static void binarySearch() {
