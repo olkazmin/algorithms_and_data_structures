@@ -13,8 +13,9 @@ public class Excercises {
         boolean found = false;
         int first = -1;
         int second = -1;
-        for (int i = left; i < a.length;i++) {
-            for (int j = left + 1;j < a.length;j++) {
+        for (int i = left; i < a.length;i++) {      // n
+
+            for (int j = left + 1;j < a.length;j++) {   //
                 if (a[i] + a[j] == x) {
                     found = true;
                     first = i;
